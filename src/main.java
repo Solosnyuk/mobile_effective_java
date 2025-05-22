@@ -1,3 +1,7 @@
+import Animals.Animal;
+import Animals.Cat;
+import Animals.Dog;
+
 public class main {
     public static void main(String[] args) {
         Employee ivan = new Employee("Иван Павлович", "сварщик", "ivan@email.com",
@@ -18,6 +22,20 @@ public class main {
             employeeArray[3] = alex;
             employeeArray[4] = artem;
 
-        Employee.getInfoAge(employeeArray, 40);
+        //Employee.getInfoAge(employeeArray, 40);
+
+        //////////////////////////////////////////////////////////
+
+        Dog bobik = new Dog("Бобик");
+        Dog bax = new Dog("Бакс");
+        Cat felix = new Cat("Феликc");
+
+        bobik.swim(4);
+        bobik.run(123);
+        felix.run(120);
+        felix.swim(2);
+
+        Dog.getCount();
+        Animal.getCount();
     }
 }
