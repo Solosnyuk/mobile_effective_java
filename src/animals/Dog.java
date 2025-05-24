@@ -1,17 +1,19 @@
-package Animals;
+package animals;
 
 public class Dog extends Animal {
     private static int countDog = 0;
+    private int swimLimit = 10;
+    private int runLimit = 500;
 
     public Dog(String name) {
-        super(name, 10, 500);
+        super(name);
         countDog++;
     }
 
     @Override
     public void swim(int distance) {
-        if(distance > getSwimLimit()) {
-            System.out.println(getName() + " может проплыть не более " + getSwimLimit() + "м");
+        if(distance > swimLimit) {
+            System.out.println(getName() + " может проплыть не более " + swimLimit + "м");
         } else if (distance < 0) {
             System.out.println(distance + " неверное значение");
         } else
@@ -21,8 +23,8 @@ public class Dog extends Animal {
 
     @Override
     public void run(int distance) {
-        if(distance > getRunLimit()) {
-            System.out.println(getName() + " может пробежать не более " + getRunLimit() +  " м");
+        if(distance > runLimit) {
+            System.out.println(getName() + " может пробежать не более " + runLimit +  " м");
         } else if (distance < 0) {
             System.out.println(distance + " неверное значение");
         } else
