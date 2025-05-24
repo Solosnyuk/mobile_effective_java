@@ -1,6 +1,8 @@
-import Animals.Animal;
-import Animals.Cat;
-import Animals.Dog;
+import animals.Animal;
+import animals.Cat;
+import animals.Dog;
+import racers.Human;
+import racers.Robot;
 
 public class main {
     public static void main(String[] args) {
@@ -37,5 +39,22 @@ public class main {
 
         Dog.getCount();
         Animal.getCount();
+
+        /// //////////////////////////////////////////////////////////////////////////
+
+        Object[] participants = {
+                new Human("Олег", 2.3, 20000),
+                new racers.Cat("Микки", 1, 1000),
+                new Robot("Маск", 2, 12000)
+        };
+
+        Object[] obstacles = {
+                new Wall(1),
+                new Treadmill(100),
+                new Wall(2.3),
+                new Treadmill(500),
+                new Treadmill(2000)
+        };
+
     }
 }
