@@ -1,36 +1,53 @@
 package racers;
 
-public class Human {
+import racers.Obstacle.Obstacle;
+
+public class Human implements Participant {
     private String name;
-    private int maxRunLength;
+    private int maxRunDistance;
     private double maxJumpHeight;
 
-    public Human(String name, double maxJumpHeight, int maxRunLength) {
+    public Human(String name, int maxRunDistance, double maxJumpHeight) {
         this.name = name;
+        this.maxRunDistance = maxRunDistance;
         this.maxJumpHeight = maxJumpHeight;
-        this.maxRunLength = maxRunLength;
     }
 
+    @Override
+    public boolean run(int distance) {
+        if (distance <= maxRunDistance) {
+            System.out.println(name + " пробежал " + distance + " м.");
+            return true;
+        } else {
+            System.out.println(name + " не смог пробежать " + distance + " м.");
+            return false;
+        }
+    }
+    @Override
+    public boolean jump(double height) {
+        if (height <= maxJumpHeight) {
+            System.out.println(name + " прыгнул " + height + " м.");
+            return true;
+        } else {
+            System.out.println(name + " не смог прыгнуть " + height + " м.");
+            return false;
+        }
+    }
+
+    @Override
     public String getName() {
         return name;
     }
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public void jump(double height) {
-        System.out.println(this.name + (toJump(height) ? " успешно перепрыгнул " : " не смог перепрыгнуть ") + height + " м");
-    }
-
-    public void run(int length) {
-        System.out.println(this.name + (toRun(length) ? " успешно пробежал " : " не смог пробежать ") + length + " м");
-    }
-
-    public boolean toRun(int length){
-        return maxRunLength >= length;
-    }
-
-    public boolean toJump(double heigth){
-        return maxJumpHeight >= heigth;
+    @Override
+    public boolean passObstacles(Obstacle[] obstacles) {
+        System.out.println("\nУчастник: " + name);
+        for (Obstacle obstacle : obstacles) {
+            if (!obstacle.attempt(this)) {
+                System.out.println(name + " выбыл из соревнования.");
+                return false;
+            }
+        }
+        return true;
     }
 }

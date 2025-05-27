@@ -2,6 +2,10 @@ import animals.Animal;
 import animals.Cat;
 import animals.Dog;
 import racers.Human;
+import racers.Obstacle.Obstacle;
+import racers.Obstacle.Track;
+import racers.Obstacle.Wall;
+import racers.Participant;
 import racers.Robot;
 
 public class main {
@@ -42,19 +46,20 @@ public class main {
 
         /// //////////////////////////////////////////////////////////////////////////
 
-        Object[] participants = {
-                new Human("Олег", 2.3, 20000),
-                new racers.Cat("Микки", 1, 1000),
-                new Robot("Маск", 2, 12000)
+        Participant[] participants = {
+                new Human("Артем", 10000, 2),
+                new racers.Cat("Барсик", 200, 1),
+                new Robot("Р2-Д2", 1000, 1)
         };
 
-        Object[] obstacles = {
+        Obstacle[] obstacles = {
+                new Track(400),
                 new Wall(1),
-                new Treadmill(100),
-                new Wall(2.3),
-                new Treadmill(500),
-                new Treadmill(2000)
+                new Track(1001)
         };
 
+        for (Participant participant : participants) {
+            participant.passObstacles(obstacles);
+        }
     }
 }
