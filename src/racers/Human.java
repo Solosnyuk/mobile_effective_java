@@ -41,7 +41,7 @@ public class Human implements Participant {
 
     @Override
     public boolean passObstacles(Obstacle[] obstacles) {
-        System.out.println("\nУчастник: " + name);
+        System.out.println("\n" + "Участник: " +  getName());
         for (Obstacle obstacle : obstacles) {
             if (!obstacle.attempt(this)) {
                 System.out.println(name + " выбыл из соревнования.");
