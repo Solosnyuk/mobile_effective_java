@@ -2,12 +2,16 @@ import animals.Animal;
 import animals.Cat;
 import animals.Dog;
 import colection.TaskOne;
+import colection.TaskTwo;
 import racers.Human;
 import racers.Obstacle.Obstacle;
 import racers.Obstacle.Track;
 import racers.Obstacle.Wall;
 import racers.Participant;
 import racers.Robot;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class main {
     public static void main(String[] args) {
@@ -17,6 +21,17 @@ public class main {
         //Напишите программу на Java для подсчета количества конкретных слов в строке, используя HashMap
         TaskOne.wordCount(text);
 
+        ArrayList arrayList = new ArrayList<>();
+        arrayList.add("Напишите ");
+        arrayList.add("Java-программу ");
+        arrayList.add("для обхода ArrayList ");
+        arrayList.add("с использованием цикла for, while и улучшенного цикла for");
+
+        ArrayList<Integer> arrayNum = new ArrayList<>(Arrays.asList(2,4,5));
+        //Напишите Java-программу для обхода ArrayList с использованием цикла for, while и улучшенного цикла for
+        TaskTwo.arrayFor(arrayList);
+        TaskTwo.arrayForEach(arrayNum);
+        TaskTwo.arrayWhile(arrayNum);
 
 
 
