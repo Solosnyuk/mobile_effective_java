@@ -1,7 +1,9 @@
 import animals.Animal;
 import animals.Cat;
 import animals.Dog;
+import colection.TaskFour;
 import colection.TaskOne;
+import colection.TaskThree;
 import colection.TaskTwo;
 import racers.Human;
 import racers.Obstacle.Obstacle;
@@ -27,13 +29,19 @@ public class main {
         arrayList.add("для обхода ArrayList ");
         arrayList.add("с использованием цикла for, while и улучшенного цикла for");
 
-        ArrayList<Integer> arrayNum = new ArrayList<>(Arrays.asList(2,4,5));
         //Напишите Java-программу для обхода ArrayList с использованием цикла for, while и улучшенного цикла for
         TaskTwo.arrayFor(arrayList);
-        TaskTwo.arrayForEach(arrayNum);
-        TaskTwo.arrayWhile(arrayNum);
+        TaskTwo.arrayForEach(arrayList);
+        TaskTwo.arrayWhile(arrayList);
 
+        //Написать метод, который преобразует массив в ArrayList
+        Integer[] arrNum =  {2,3,4,22,31};
+        ArrayList list = new ArrayList<>(TaskThree.convertToArrayList(arrNum));
 
+        //Необходимо создать программу на Java, которая будет работать со списком целых чисел с
+        // использованием Stream API. Программа должна реализовать следующий функционал:
+        Integer[] intArr = {1,2,4,5};
+        TaskFour.arrayListToFilterSummPrint(intArr);
 
 
         /// //////////////////////////////////////////////////////////////////////////////////

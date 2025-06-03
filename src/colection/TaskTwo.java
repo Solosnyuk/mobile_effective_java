@@ -10,19 +10,20 @@ public class TaskTwo {
         System.out.println("===========================");
     }
 
-    public static void arrayForEach(ArrayList<Integer> arrayList) {
-        for (Integer num : arrayList) {
-            System.out.println(num);
+    public static <T> void arrayForEach(ArrayList<T> arrayList) {
+        for (T item : arrayList) {
+            System.out.println(item);
         }
         System.out.println("===========================");
     }
 
-    public static void arrayWhile(ArrayList<Integer> arrayList) {
+    public static void arrayWhile(ArrayList arrayList) {
 
         int i = 0;
         while (i < arrayList.size()) {
             System.out.println(arrayList.get(i));
             i++;
         }
+    System.out.println("===========================");
     }
 }
