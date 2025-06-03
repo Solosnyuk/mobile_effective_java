@@ -16,5 +16,6 @@ public class TaskOne {
        }
 
        System.out.println(textWord);
+       System.out.println("============================");
    }
 }
