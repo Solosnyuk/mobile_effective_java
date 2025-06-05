@@ -13,7 +13,7 @@ public class TaskFive {
                 try {
                     summ += Integer.parseInt(array[i][j]);
                 } catch (NumberFormatException e) {
-                    throw new MyArrayDataException("Не верные данные! Элемент: " + array[i][j] + ", не является числом." +
+                     throw new MyArrayDataException("Неверные данные! Элемент: " + array[i][j] + ", не является числом." +
                             "\n Находящийся в "+ ( i + 1) + " блоке: " + Arrays.toString(array[i]) );
                 }
             }
