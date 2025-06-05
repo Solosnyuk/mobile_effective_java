@@ -40,7 +40,7 @@ public class main {
         Integer[] intArr = {1,2,4,5};
         TaskFour.arrayListToFilterSummPrint(intArr);
 
-        String[][] deepArrStr =  {{"1","2","3","4"},{"5","6","7","8"},{"dog","10","11","12"},{"13","14","15","16"}};
+        String[][] deepArrStr =  {{"1","2","3","4"},{"5","6","7","8"},{"23","10","11","12"},{"13","14","15","16"}};
 
         //В методе main() вызвать полученный метод, обработать возможные исключения
         // MyArraySizeException и MyArrayDataException и вывести результат расчета.
