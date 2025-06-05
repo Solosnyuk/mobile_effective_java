@@ -3,7 +3,7 @@ package colection;
 import java.util.Arrays;
 
 public class TaskFive {
-    public static int sumDeepArray (String[][] array) throws MyArraySizeException, MyArrayDataException {
+    public static int sumDeepArray (String[][] array) {
         if (array.length != 4 || array[0].length != 4) {
             throw new MyArraySizeException("Размер двойного массива не соотвествует 4х4.");
         }
