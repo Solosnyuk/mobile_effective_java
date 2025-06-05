@@ -1,10 +1,7 @@
 import animals.Animal;
 import animals.Cat;
 import animals.Dog;
-import colection.TaskFour;
-import colection.TaskOne;
-import colection.TaskThree;
-import colection.TaskTwo;
+import colection.*;
 import racers.Human;
 import racers.Obstacle.Obstacle;
 import racers.Obstacle.Track;
@@ -16,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws MyArraySizeException, MyArrayDataException {
 
         String text = "Напишите программу на Java java для подсчета количества конкретных слов в строке, используя HashMap.";
 
@@ -43,6 +40,11 @@ public class main {
         Integer[] intArr = {1,2,4,5};
         TaskFour.arrayListToFilterSummPrint(intArr);
 
+        String[][] deepArrStr =  {{"1","2","3","4"},{"5","6","7","8"},{"9","10","11","12"},{"13","14","15","16"}};
+
+        //В методе main() вызвать полученный метод, обработать возможные исключения
+        // MyArraySizeException и MyArrayDataException и вывести результат расчета.
+        System.out.println(TaskFive.sumDeepArray(deepArrStr));
 
         /// //////////////////////////////////////////////////////////////////////////////////
 //

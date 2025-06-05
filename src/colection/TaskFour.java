@@ -23,5 +23,6 @@ public class TaskFour {
         System.out.println("Четные числа: " + evenNumb);
         System.out.println("Умноженые на два: " + multiNum);
         System.out.println("Сумма чисел: " + summ);
+        System.out.println("===========================");
     }
 }
